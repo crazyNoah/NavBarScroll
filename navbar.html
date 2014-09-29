@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{margin: auto}
+        .navBar-wrap{width: 404px;overflow: hidden;position: relative;margin: 20px;margin-left: 50px;}
+        .navbar-prev{position: absolute;left: 20px;top:32px;
+            width:0; height:0; border-width:20px 10px; border-style:solid; border-color: #ffffff #ff3300 #ffffff #ffffff ;}
+        .navbar-next{position: absolute;left: 459px;top:32px;
+            border-width:20px 10px; border-style:solid; border-color: #ffffff  #ffffff #ffffff #ff3300;}
+        ul{background-color: rosybrown;height: 28px;width: 1200px;padding: 0px;position: relative;}
+        ul li{float: left;list-style: none;border-right:1px solid black;height: 28px;line-height: 28px;width: 100px;text-align: center;}
+        ul li.current{background-color: hotpink;}
+        a{text-decoration: none;cursor: pointer}
+    </style>
+</head>
+<body>
+<a class="navbar-prev"></a>
+<a class="navbar-next"></a>
+<div class="navBar-wrap">
+
+    <ul class="dt_menu_nav">
+        <li  class="index1"><a>管理1</a></li>
+        <li  class="index2"><a>管理2</a></li>
+        <li  class="index3"><a>管理3</a></li>
+        <li  class="index4 "><a>管理4</a></li>
+        <li  class="index5 "><a>管理5</a></li>
+        <li  class="index6 "><a>管理6</a></li>
+        <li  class="index7 "><a>管理7</a></li>
+        <li  class="index8 "><a>管理8</a></li>
+        <li  class="index9 current"><a>管理9</a></li>
+    </ul>
+</div>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="jquery.navBarScroll.js"></script>
+<script>
+    $(function(){
+        $.navBarScroll({
+            step:3,
+            nav_li:'ul li',
+            current_li:'index9'
+        });
+    });
+</script>
+</body>
+</html>
