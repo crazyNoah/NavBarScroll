@@ -39,6 +39,11 @@
 
             show_length = $nav_bar_ul.parent('.navBar-wrap').outerWidth()/step_length;
             hide_length = length-show_length;
+            if(hide_length<=0){
+                $(o.prev).css('display','none');
+                $(o.next).css('display','none');
+                return false;
+            }
             if(current_li_index>=show_length){
                 current_step = (current_step+current_li_index)>hide_length?hide_length:(current_step+current_li_index);
                 if(current_step==hide_length) $next.css('display','none');
